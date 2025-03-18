@@ -2,37 +2,81 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Editorial - Newsletter 2025</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Newsletter Corporativo - Patronato de la Infancia</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <article class="editorial">
-    <h1>Editorial</h1>
-    <p>¡Hola a todos, ¿cómo están?! ¡Esperamos que muy bien!</p>
-    <p>
-      Con mucho entusiasmo damos la bienvenida a este primer newsletter del 2025, el primero del año, y no podríamos estar más contentos de comenzar este ciclo con todos ustedes. Después de un merecido receso escolar, ¡volvemos con todo a la rutina y a seguir brindando lo mejor a nuestros chicos, sus familias y, por supuesto, a todo el equipo que hace posible que cada día crezca nuestra gran comunidad!
-    </p>
-    <p>
-      En esta edición les compartimos importantes novedades del personal y algunas actualizaciones sobre las obras realizadas durante el receso. Además, queremos contarles sobre las donaciones recibidas durante este período, que nos han permitido seguir avanzando en nuestros proyectos y mantener el compromiso con todos nuestros estudiantes.
-    </p>
-    <p>
-      Estamos muy contentos de presentarles al equipo de administración del Patronato de la Infancia, formado por Ornella, Cecilia y Ariel, quienes están trabajando arduamente en proyectos que contribuyen al crecimiento de nuestra organización. Ellos nos cuentan en esta edición sobre sus iniciativas y cómo nos apoyan día a día en la gestión interna.
-    </p>
-    <p>
-      Como siempre, también es un placer para nosotros conocer más sobre cada uno de ustedes. Por eso, en esta edición, tenemos entrevistas con Victoria de Infancia 2000, Romina de Ángeles Custodios y Luisa del Instituto Loreto, quienes nos cuentan sobre sus experiencias laborales y de vida.
-    </p>
-    <p>
-      Estamos muy emocionados de poder compartir con ustedes todas estas novedades y, como siempre, agradecerles por su compromiso y dedicación a la misión del Patronato de la Infancia. ¡Que este 2025 nos encuentre con muchas ganas de seguir creciendo juntos!
-    </p>
-    <p>
-      Un fuerte abrazo y muchas gracias por ser parte del Patronato de la Infancia.
-    </p>
-    <p>
-      <strong>Guillermo Gutiérrez<br>
-      Director Ejecutivo<br>
-      Patronato de la Infancia</strong>
-    </p>
-  </article>
+  <header>
+    <h1>Newsletter Corporativo</h1>
+    <nav class="menu">
+      <button onclick="scrollToSection('editorial')">Editorial</button>
+      <button onclick="scrollToSection('resumen-novedades')">Novedades de Personal</button>
+      <button onclick="scrollToSection('resumen-proyectos')">Proyectos</button>
+      <button onclick="scrollToSection('resumen-conociendonos')">Conociéndonos</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Editorial -->
+    <section id="editorial" class="section">
+      <article class="editorial">
+        <h2>Editorial</h2>
+        <p>
+          ¡Hola a todos, ¿cómo están?! ¡Esperamos que muy bien! Con mucho entusiasmo damos la bienvenida a este primer newsletter del 2025, el primero del año, y no podríamos estar más contentos de comenzar este ciclo con todos ustedes. Después de un merecido receso escolar, ¡volvemos con todo a la rutina y a seguir brindando lo mejor a nuestros chicos, sus familias y, por supuesto, a todo el equipo que hace posible que cada día crezca nuestra gran comunidad!
+        </p>
+        <p>
+          En esta edición les compartimos importantes novedades del personal y algunas actualizaciones sobre las obras realizadas durante el receso. Además, queremos contarles sobre las donaciones recibidas durante este período, que nos han permitido seguir avanzando en nuestros proyectos y mantener el compromiso con todos nuestros estudiantes.
+        </p>
+        <p>
+          Estamos muy contentos de presentarles al equipo de administración del Patronato de la Infancia, formado por Ornella, Cecilia y Ariel, quienes están trabajando arduamente en proyectos que contribuyen al crecimiento de nuestra organización. Ellos nos cuentan en esta edición sobre sus iniciativas y cómo nos apoyan día a día en la gestión interna.
+        </p>
+        <p>
+          Como siempre, también es un placer para nosotros conocer más sobre cada uno de ustedes. Por eso, en esta edición, tenemos entrevistas con Victoria de Infancia 2000, Romina de Ángeles Custodios y Luisa del Instituto Loreto, quienes nos cuentan sobre sus experiencias laborales y de vida.
+        </p>
+        <p>
+          Estamos muy emocionados de poder compartir con ustedes todas estas novedades y, como siempre, agradecerles por su compromiso y dedicación a la misión del Patronato de la Infancia. ¡Que este 2025 nos encuentre con muchas ganas de seguir creciendo juntos!
+        </p>
+        <p class="firma">
+          Guillermo Gutiérrez<br>
+          Director Ejecutivo<br>
+          Patronato de la Infancia
+        </p>
+      </article>
+    </section>
+
+    <!-- Resumen de Novedades de Personal -->
+    <section id="resumen-novedades" class="section resumen">
+      <h2>Novedades de Personal</h2>
+      <p>
+        Conoce las recientes incorporaciones y cambios en nuestro equipo educativo y de apoyo, además de las obras y mejoras que se han implementado durante el receso.
+      </p>
+      <button onclick="location.href='novedades.html'">Leer más</button>
+    </section>
+
+    <!-- Resumen de Proyectos -->
+    <section id="resumen-proyectos" class="section resumen">
+      <h2>Proyectos Destacados</h2>
+      <p>
+        Descubre el trabajo del área de Administración, el equipo detrás de las gestiones contables y tecnológicas, y cómo colaboramos para optimizar procesos.
+      </p>
+      <button onclick="location.href='proyectos.html'">Leer más</button>
+    </section>
+
+    <!-- Resumen de Conociéndonos -->
+    <section id="resumen-conociendonos" class="section resumen">
+      <h2>Conociéndonos</h2>
+      <p>
+        Un espacio dedicado a conocer de cerca a los miembros de nuestra organización, a través de entrevistas y relatos que muestran sus experiencias y anécdotas.
+      </p>
+      <button onclick="location.href='conociendonos.html'">Leer más</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Patronato de la Infancia</p>
+  </footer>
+
+  <script src="js/script.js"></script>
 </body>
 </html>
