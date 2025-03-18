@@ -1,112 +1,185 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Conociéndonos - Patronato de la Infancia</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <title>Conociéndonos - Patronato de la Infancia</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+        }
+        .section-title {
+            color: #2c3e50;
+            text-align: center;
+            margin: 40px 0;
+            text-transform: uppercase;
+        }
+        .interview {
+            margin: 30px 0;
+            padding: 25px;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .person-name {
+            color: #e74c3c;
+            margin-bottom: 20px;
+            font-size: 1.4em;
+        }
+        .question {
+            font-weight: bold;
+            color: #2980b9;
+            margin-top: 20px;
+            display: block;
+        }
+        .note {
+            margin-top: 25px;
+            font-style: italic;
+            color: #7f8c8d;
+            border-top: 1px solid #ddd;
+            padding-top: 15px;
+        }
+        .birthday-list {
+            margin: 30px 0;
+            padding-left: 25px;
+            columns: 2;
+        }
+        .birthday-list li {
+            margin-bottom: 8px;
+            break-inside: avoid;
+        }
+        .highlight {
+            color: #27ae60;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
-  <header class="page-header">
-    <h1>Conociéndonos</h1>
-    <nav>
-      <button class="btn-back" onclick="location.href='index.html'">&larr; Volver al inicio</button>
-    </nav>
-  </header>
-  <main>
-    <article class="card content-card">
-      <section id="intro-conociendonos">
-        <p>
-          En esta sección nos acercamos a los miembros de nuestra organización mediante entrevistas que revelan sus experiencias, logros y desafíos.
-        </p>
-      </section>
+    <h1 class="section-title">Conociéndonos</h1>
+    <p>Nos complace presentarles la sección Conociéndonos, un espacio dedicado a conocer más de cerca a los miembros de nuestra organización. En cada edición, les traeremos tres entrevistas con el personal de la institución, donde compartirán sus experiencias, logros, desafíos y perspectivas.</p>
 
-      <!-- Entrevista: Romina -->
-      <section id="entrevista-romina">
-        <h2>Conociendo a... ROMINA DE LOS ÁNGELES CUSTODIOS</h2>
-        <div class="entrevista">
-          <p><strong>¿Cuál es tu rol y cuánto tiempo llevas en Patronato?</strong></p>
-          <p>
-            Trabajo en el Instituto de Los Ángeles Custodios desde el 2 de mayo de 1997, iniciando como suplente y asumiendo roles administrativos durante más de 17 años.
-          </p>
-          <p><strong>¿Qué disfrutas de tu trabajo?</strong></p>
-          <p>
-            Disfruto de la comunidad, la libertad de gestión y el ambiente de respeto y apoyo mutuo.
-          </p>
-          <p class="nota">
-            <strong>Nota producida por:</strong> Ramiro Silvera, Responsable de RRHH
-          </p>
+    <!-- Entrevista Romina -->
+    <div class="interview">
+        <h2 class="person-name">Conociendo a... ROMINA DE LOS ÁNGELES CUSTODIOS</h2>
+        
+        <p class="question">¿Cuál es tu rol en la organización y cuánto tiempo llevas trabajando en Patronato?</p>
+        <p>Trabajo en el Instituto de Los Ángeles Custodios y comencé en la institución el 2 de mayo de 1997. Recientemente me había recibido de maestra y buscaba trabajo. Presenté mi currículum y me tomaron para una suplencia en tercer grado. Sin embargo, la maestra de apoyo planeaba tomar una licencia larga y, finalmente, renunció, por lo que me ofrecieron ese cargo.<br><br>
+        Mi trabajo consistía en tareas administrativas y en cubrir suplencias cuando los docentes faltaban. No era un acompañamiento pedagógico como lo es ahora, ya que el tiempo estaba dividido entre la administración y la docencia. Estuve en ese puesto por más de 17 años.<br><br>
+        Cuando hubo una renuncia en vicedirección, Viviana Balinoti, quien era secretaria, asumió ese cargo y a mí me ofrecieron la secretaría. Fue un gran desafío porque la escuela creció mucho, se modernizó y cada año presenta nuevos retos.</p>
+
+        <p class="question">¿Qué es lo que más disfrutas de tu trabajo y qué te atrae de trabajar en Patronato?</p>
+        <p>Disfruto mucho la comunidad y la libertad que nos da la dirección. Ana y Viviana nos brindan confianza para manejar nuestras aulas y siempre están presentes, al igual que el gabinete psicopedagógico. Aunque hay cosas por mejorar, es un ambiente donde se trabaja con tranquilidad, respeto y apoyo mutuo. Me gusta venir a trabajar porque el clima laboral es muy agradable.</p>
+
+        <p class="question">¿Podrías compartir algún proyecto reciente o desafío que hayas enfrentado y cómo lo superaste?</p>
+        <p>Estamos trabajando en mejorar la comunicación interna, promoviendo un diálogo honesto y constructivo entre docentes y directivos. También acompañamos iniciativas como salud bucal, arte, programación, desayunos saludables y apoyo a la inclusión con maestros especializados y, próximamente, fonoaudiología.</p>
+
+        <p class="question">¿Qué hobbies o actividades disfrutas fuera del trabajo?</p>
+        <p>Me gusta la danza y el canto, especialmente todo lo relacionado con el arte. También disfruto compartir tiempo con mis hijos.</p>
+
+        <p class="question">¿Te gustaría compartir algo sobre tu familia?</p>
+        <p>Tengo dos hijos, María Celeste y Facundo, exalumnos del colegio. Actualmente viven de forma independiente y trabajan. Mis padres siguen presentes en mi vida; mi mamá vive en Trelew y mi papá en Buenos Aires, así que trato de visitarlos regularmente. No tengo hermanos, pero cuento con amigos cercanos. En lo espiritual, tengo una base católica, aunque practico el Tao como una filosofía de vida.</p>
+
+        <p class="question">¿Quieres compartir alguna anécdota divertida que hayas tenido en estos años?</p>
+        <p>Cuando ingresé, la escuela no era como es hoy. La directora, Ana, luchó mucho para mejorarla, enfrentando dificultades para conseguir recursos y apoyo institucional. Con el tiempo, eso cambió y se logró un crecimiento significativo. Con los chicos hemos vivido muchas situaciones divertidas, aunque ahora no recuerdo una en particular.</p>
+
+        <div class="note">
+            Nota producida por:<br>
+            <span class="highlight">Ramiro Silvera</span><br>
+            Responsable de RRHH<br>
+            Patronato de la infancia
         </div>
-      </section>
+    </div>
 
-      <!-- Entrevista: Luisa -->
-      <section id="entrevista-luisa">
-        <h2>Conociendo a... LUISA DEL INSTITUTO LORETO</h2>
-        <div class="entrevista">
-          <p><strong>¿Cuál es tu rol y tu trayectoria?</strong></p>
-          <p>
-            Soy referente de cocina con 17 años en el Patronato y más de 26 años vinculada a la institución, encargándome de la organización del equipo y planificación de menús.
-          </p>
-          <p><strong>¿Qué disfrutas de tu trabajo?</strong></p>
-          <p>
-            Me encanta el ambiente de compañerismo y la satisfacción de ver la alegría de los chicos.
-          </p>
-          <p class="nota">
-            <strong>Nota producida por:</strong> Ramiro Silvera, Responsable de RRHH
-          </p>
+    <!-- Entrevista Luisa -->
+    <div class="interview">
+        <h2 class="person-name">Conociendo a... LUISA DEL INSTITUTO LORETO</h2>
+        
+        <p class="question">¿Cuál es tu rol en la organización y cuánto tiempo llevas trabajando en el Patronato?</p>
+        <p>Soy referente de cocina. Me encargo de organizar las tareas del equipo, planificar los menús, coordinar proveedores y asegurar que todo esté en condiciones. Trabajo en el Patronato hace 17 años, pero en total llevo más de 26 años vinculada a la institución.<br><br>
+        Ingresé como mamá de la escuela, colaborando en distintas áreas según se necesitara. Con el tiempo, me ofrecieron un puesto en cocina y acepté sin dudar. Aprendí de la experiencia y del equipo, especialmente de la cocinera anterior, a quien le debo mucho de lo que sé hoy.</p>
+
+        <p class="question">¿Qué es lo que más disfrutas de tu trabajo y por qué?</p>
+        <p>El ambiente de compañerismo. No solo con mi equipo de cocina, sino con toda la comunidad del Patronato. También disfruto planificar los menús y ver la alegría de los chicos cuando les gusta la comida. Me encanta preparar las tortas de fin de mes y hacer decoraciones para ocasiones especiales.</p>
+
+        <p class="question">¿Podrías compartir algún proyecto reciente o desafío que hayas enfrentado y cómo lo superaste?</p>
+        <p>El mayor desafío fue el cambio de rol a referente. Pasé de cocinera, con ciertas responsabilidades acotadas, a un puesto que implica coordinar con otros referentes y tomar decisiones más amplias. Me costó adaptarme, especialmente cuando tengo que dar indicaciones a compañeros, pero aprendí que es parte del crecimiento.</p>
+
+        <p class="question">¿Qué hobbies o actividades disfrutas fuera del trabajo?</p>
+        <p>Me gusta pasar tiempo con mis nietas, organizamos piyamadas y miramos películas juntas. También disfruto tejer a crochet y estudiar. Estoy terminando el CBC de Abogacía, y mis nietas me ven estudiar, lo que me encanta porque les enseña la importancia del esfuerzo.</p>
+
+        <p class="question">¿Te gustaría compartir algo acerca de tu familia? ¿Cómo está compuesta?</p>
+        <p>Vengo de una familia numerosa, con ocho hermanos. Tengo tres hijos, dos de ellos casados, y una nieta que estudia en la escuela. Estoy separada, pero mantengo buena relación con mi expareja y convivimos bajo un acuerdo. También tengo un perro que es parte de la familia.</p>
+
+        <p class="question">¿Podrías compartir alguna anécdota divertida?</p>
+        <p>Lo más lindo es la conexión con los chicos. Nos encanta planificar sorpresas para ellos en fechas especiales, como el Día del Niño o Navidad. También me emociona cuando se acercan en el comedor, nos abrazan y nos dicen que la comida está rica. Es un reconocimiento no solo para mí, sino para todo el equipo, porque cada tarea, desde limpiar hasta cocinar, es fundamental para que todo funcione bien.</p>
+
+        <div class="note">
+            Nota producida por:<br>
+            <span class="highlight">Ramiro Silvera</span><br>
+            Responsable de RRHH<br>
+            Patronato de la infancia
         </div>
-      </section>
+    </div>
 
-      <!-- Entrevista: Nadia -->
-      <section id="entrevista-nadia">
-        <h2>Conociendo a... NADIA DE INFANCIA 2000</h2>
-        <div class="entrevista">
-          <p><strong>¿Cuál es tu rol y tu experiencia?</strong></p>
-          <p>
-            Soy docente y maestra en el turno mañana con 5to A y 5to B, con 13 años en la escuela y siendo exalumna.
-          </p>
-          <p><strong>¿Qué disfrutas de tu trabajo?</strong></p>
-          <p>
-            Disfruto enseñar, especialmente Matemática, y compartir momentos significativos con mis alumnos.
-          </p>
-          <p class="nota">
-            <strong>Nota producida por:</strong> Brisa Albarracín, Abril Galván y Julieta Suárez
-          </p>
+    <!-- Entrevista Nadia -->
+    <div class="interview">
+        <h2 class="person-name">Conociendo a... NADIA DE INFANCIA 2000</h2>
+        
+        <p class="question">¿Cuál es tu rol en la escuela y cuánto tiempo llevas trabajando en el Patronato?</p>
+        <p>Soy docente, maestra. Este año estoy en el turno mañana con 5to A y 5to B. Llevo 13 años trabajando en la escuela, pero la conozco desde hace mucho más tiempo porque soy exalumna.</p>
+
+        <p class="question">¿Qué es lo que más disfrutas de tu trabajo y por qué? ¿Qué te atrae del Patronato?</p>
+        <p>Me encanta venir a la escuela, sobre todo porque soy exalumna y quiero mucho este lugar. Disfruto entrar y ver los árboles tan lindos, tanto verde. También me gusta mucho estar con mis alumnos y alumnas, charlar con ellos, enseñarles. Disfruto especialmente enseñarles Matemática. Me doy cuenta de que a ellos les gusta participar en mis clases, lo cual hace que mi trabajo sea aún más gratificante.</p>
+
+        <p class="question">¿Podrías compartir algún proyecto reciente o desafío que hayas enfrentado?</p>
+        <p>Un proyecto reciente fue la feria de ciencias. Trabajé en conjunto con la Seño Clarita, quien está a cargo del otro quinto. Como yo enseño Ciencias Sociales y ella Ciencias Naturales, decidimos trabajar un tema en común: los problemas ambientales. Investigamos mucho con los chicos, leímos y buscamos información sobre los problemas ambientales en Argentina. Realizamos maquetas, láminas, dibujos y juegos relacionados con el tema. Tenemos estudiantes que son excelentes dibujantes y contribuyeron con trabajos hermosos. Fue una experiencia muy enriquecedora y el día de la feria lo disfrutamos muchísimo.</p>
+
+        <p class="question">¿Qué hobbies o actividades disfrutas fuera del trabajo?</p>
+        <p>Me gusta mucho caminar. Salgo a caminar tres o cuatro veces por semana después de trabajar. Dejo mis cosas, tomo unos mates con mi familia, especialmente con mi hija, y luego hago una caminata de media hora o 40 minutos. Es algo que disfruto mucho.</p>
+
+        <p class="question">¿Te gustaría compartir algo acerca de tu familia?</p>
+        <p>Sí, claro. Tengo una nena que se llama Rufina, tiene 6 años y también asiste a esta escuela. Está en Primero B. Nos gusta venir juntas a la escuela. Aunque ella se va un poco antes porque tiene otras actividades, disfrutamos mucho de este espacio compartido. Los fines de semana también nos gusta salir a pasear, ir a la plaza o tomar un helado.</p>
+
+        <p class="question">¿Qué diferencias encuentras entre cuando estudiabas acá y ahora?</p>
+        <p>Siento que no hay muchas diferencias en el trato hacia los alumnos. En mi época, al igual que ahora, los docentes transmitían mucho amor, paciencia y contención. Recuerdo que venía contenta a la escuela, y veo que eso sigue igual. Sin embargo, algo que ha cambiado es la posibilidad de hablar y manifestar cómo se siente uno. Por ejemplo, ahora existe la ESI (Educación Sexual Integral), que no teníamos en mi época. Esto permite a los chicos y chicas expresar sus emociones o preocupaciones, algo que antes era mucho más difícil.</p>
+
+        <div class="note">
+            Nota producida por:<br>
+            <span class="highlight">Brisa Albarracín, Abril Galván y Julieta Suárez.</span><br>
+            Alumnos de 6to año (Ciclo 2024)<br>
+            Infancia 2000
         </div>
-      </section>
+    </div>
 
-      <!-- Cumpleaños -->
-      <section id="cumpleanos">
-        <h2>¡Celebramos los cumpleaños de marzo!</h2>
-        <p>
-          Nos complace anunciar a los integrantes que cumplen años en marzo:
-        </p>
-        <ul>
-          <li>2 de marzo: Castillo Ezequiel Sebastián (Ángeles Custodios)</li>
-          <li>3 de marzo: Donnelly María Eugenia (Infancia 2000)</li>
-          <li>3 de marzo: Cubilla Patricia Alejandra (Instituto Loreto)</li>
-          <li>4 de marzo: Blok Nelida Zulema (Instituto Loreto)</li>
-          <li>5 de marzo: De Chiara Mariana (Infancia 2000)</li>
-          <li>9 de marzo: Baltazar Marina Ramona (Infancia 2000)</li>
-          <li>11 de marzo: Sánchez Lugo Marcia (Infancia 2000)</li>
-          <li>16 de marzo: Juan Romina Andrea Rosa (Ángeles Custodios)</li>
-          <li>22 de marzo: Conci Silva Sabrina Ayelén (Infancia 2000) y Blok Volonterio Luisa Mabel (Instituto Loreto)</li>
-          <li>23 de marzo: Castely Gabriela V. (Infancia 2000)</li>
-          <li>27 de marzo: Cavaliere Vanesa (Ángeles Custodios) y Leonardi Verónica (Infancia 2000)</li>
-          <li>29 de marzo: Camacho Soraya (Infancia 2000)</li>
-          <li>31 de marzo: Noce Mariana Beatriz (Infancia 2000)</li>
+    <!-- Cumpleaños -->
+    <div class="birthdays">
+        <h2 class="section-title">Cumpleaños de Marzo</h2>
+        <p>Querida comunidad:<br>
+        Nos complace anunciar y celebrar los cumpleaños de nuestros integrantes durante el mes de marzo:</p>
+        
+        <ul class="birthday-list">
+            <li>2 de marzo: Castillo Ezequiel Sebastián (Ángeles Custodios)</li>
+            <li>3 de marzo: Donnelly María Eugenia (Infancia 2000)</li>
+            <li>3 de marzo: Cubilla Patricia Alejandra (Instituto Loreto)</li>
+            <li>4 de marzo: Blok Nelida Zulema (Instituto Loreto)</li>
+            <li>5 de marzo: De Chiara Mariana (Infancia 2000)</li>
+            <li>9 de marzo: Baltazar Marina Ramona (Infancia 2000)</li>
+            <li>11 de marzo: Sánchez Lugo Marcia (Infancia 2000)</li>
+            <li>16 de marzo: Juan Romina Andrea Rosa (Ángeles Custodios)</li>
+            <li>22 de marzo: Conci Silva Sabrina Ayelén (Infancia 2000)</li>
+            <li>22 de marzo: Blok Volonterio Luisa Mabel (Instituto Loreto)</li>
+            <li>23 de marzo: Castely Gabriela V. (Infancia 2000)</li>
+            <li>27 de marzo: Cavaliere Vanesa (Ángeles Custodios)</li>
+            <li>27 de marzo: Leonardi Verónica (Infancia 2000)</li>
+            <li>29 de marzo: Camacho Soraya (Infancia 2000)</li>
+            <li>31 de marzo: Noce Mariana Beatriz (Infancia 2000)</li>
         </ul>
-        <p>
-          ¡Feliz cumpleaños a todos!
-        </p>
-      </section>
-    </article>
-  </main>
-  <footer class="page-footer">
-    <p>&copy; 2025 Patronato de la Infancia</p>
-  </footer>
-  <script src="js/script.js"></script>
+        
+        <p style="text-align: center; margin-top: 25px;">Deseamos a todos un muy feliz cumpleaños y que disfruten de su día especial rodeados de sus seres queridos.</p>
+    </div>
 </body>
 </html>
-
