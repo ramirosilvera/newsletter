@@ -5,7 +5,93 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Proyectos - Administración</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Estilos consistentes con la guía anterior */
+    body {
+      font-family: 'Roboto', sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 20px;
+      background-color: #f8f9fa;
+      color: #333;
+    }
+
+    .page-header {
+      text-align: center;
+      padding: 2.5rem 1rem;
+      background: linear-gradient(135deg, #2c3e50, #3498db);
+      color: white;
+      margin: -20px -20px 2rem;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    .card {
+      background: white;
+      padding: 2.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      margin: 0 auto 2rem;
+      max-width: 1200px;
+    }
+
+    .image-container {
+      position: relative;
+      margin: 2.5rem 0;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+      background: white;
+      border: 1px solid #e0e0e0;
+    }
+
+    .image-wrapper {
+      position: relative;
+      padding-bottom: 56.25%; /* Relación 16:9 */
+      overflow: hidden;
+    }
+
+    .image-wrapper img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .team-member {
+      background: #f8f9fa;
+      padding: 1.5rem;
+      border-radius: 8px;
+      margin: 1.5rem 0;
+      border-left: 4px solid #3498db;
+    }
+
+    h2 {
+      color: #2c3e50;
+      border-bottom: 3px solid #3498db;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+
+    h3 {
+      color: #34495e;
+      margin: 2.5rem 0 1.5rem;
+    }
+
+    .btn-back {
+      background: #3498db;
+      color: white;
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .btn-back:hover {
+      background: #2980b9;
+      transform: translateY(-2px);
+    }
+  </style>
 </head>
 <body>
   <header class="page-header">
@@ -16,30 +102,32 @@
   </header>
 
   <main>
-    <article class="card content-card">
+    <article class="card">
       <h2>El trabajo del Área de Administración</h2>
-      <p>
-        Quiero aprovechar este espacio para contarles un poco más sobre el trabajo que realizamos en el área de Administración del Patronato de la Infancia y presentarles a mi equipo.
-      </p>
+
+      <div class="image-container">
+        <div class="image-wrapper">
+          <img src="https://patronatodelainfancia.org/wp-content/uploads/2025/03/Equi.jpg" 
+               alt="Equipo de Administración trabajando">
+        </div>
+      </div>
+
+      <p>Quiero aprovechar este espacio para contarles un poco más sobre el trabajo que realizamos en el área de Administración del Patronato de la Infancia y presentarles a mi equipo.</p>
       
       <section id="responsabilidades">
         <h3>Nuestras Responsabilidades</h3>
-        <p>
-          Nuestro departamento es el responsable de gestionar todas las tareas contables, financieras y administrativas de la organización. Entre nuestras funciones se encuentran:
-        </p>
+        <p>Nuestro departamento es el responsable de gestionar todas las tareas contables, financieras y administrativas de la organización. Entre nuestras funciones se encuentran:</p>
         <ul>
-          <li>Contratación y pago a proveedores.</li>
-          <li>Registración de los movimientos económicos.</li>
-          <li>Confección del balance anual.</li>
-          <li>Controles impositivos.</li>
-          <li>Soporte en auditorías externas e internas.</li>
-          <li>Mejora de procesos administrativos.</li>
-          <li>Colaboración en asuntos legales.</li>
-          <li>Gestión de trámites y reportes.</li>
+          <li>Contratación y pago a proveedores</li>
+          <li>Registración de los movimientos económicos</li>
+          <li>Confección del balance anual</li>
+          <li>Controles impositivos</li>
+          <li>Soporte en auditorías externas e internas</li>
+          <li>Mejora de procesos administrativos</li>
+          <li>Colaboración en asuntos legales</li>
+          <li>Gestión de trámites y reportes</li>
         </ul>
-        <p>
-          Últimamente nos hemos involucrado en la coordinación de los procesos tecnológicos, acompañando la iniciativa de la Comisión Directiva en la digitalización de datos y procesos. Nuestro departamento se encuentra en feedback constante con las demás áreas y trabajamos en conjunto con profesionales externos, como contadores, abogados y analistas informáticos.
-        </p>
+        <p>Últimamente nos hemos involucrado en la coordinación de los procesos tecnológicos, acompañando la iniciativa de la Comisión Directiva en la digitalización de datos y procesos. Nuestro departamento se encuentra en feedback constante con las demás áreas y trabajamos en conjunto con profesionales externos, como contadores, abogados y analistas informáticos.</p>
       </section>
 
       <section id="equipo">
@@ -47,35 +135,26 @@
 
         <article class="team-member">
           <h4>Cecilia Giurlanda</h4>
-          <p>
-            Trabaja en el Patronato desde hace más de 29 años. Si bien hoy es parte del área de administración, comenzó su camino en el sector de “tarjetas navideñas” junto con Anikò Szabò. Es Licenciada en Análisis de Sistemas por la Facultad de Ingeniería de la UBA y también realizó el profesorado en Disciplinas Industriales en la UTN. Actualmente, es la responsable de la registración de ingresos y egresos de la institución.
-          </p>
+          <p>Trabaja en el Patronato desde hace más de 29 años. Si bien hoy es parte del área de administración, comenzó su camino en el sector de "tarjetas navideñas" junto con Anikò Szabò. Es Licenciada en Análisis de Sistemas por la Facultad de Ingeniería de la UBA y también realizó el profesorado en Disciplinas Industriales en la UTN. Actualmente, es la responsable de la registración de ingresos y egresos de la institución.</p>
           <p><strong>Dato de color:</strong> Le gustan mucho los idiomas (italiano, inglés, portugués) y se recibió de Maestra de italiano en la Dante Alighieri.</p>
         </article>
 
         <article class="team-member">
           <h4>Ariel Marcelo Cozzi</h4>
-          <p>
-            Se incorporó en marzo de 2025. Es Licenciado en Economía por la UBA y profesor en el Colegio San Pedro. Tiene experiencia en distintas ONG y actualmente se desarrolla en el área de administración de Patronato realizando registraciones contables y dando soporte a la responsable de área.
-          </p>
+          <p>Se incorporó en marzo de 2025. Es Licenciado en Economía por la UBA y profesor en el Colegio San Pedro. Tiene experiencia en distintas ONG y actualmente se desarrolla en el área de administración de Patronato realizando registraciones contables y dando soporte a la responsable de área.</p>
           <p><strong>Dato de color:</strong> Le gusta jugar al fútbol.</p>
+        </article>
+
+        <article class="team-member">
+          <h4>Ornella Bellosi</h4>
+          <p>Me incorporé al Patronato en diciembre de 2023 y actualmente soy la Responsable del área. Soy Contadora Pública, egresada de la Universidad de Belgrano, y tengo más de 10 años de experiencia en el ámbito administrativo y contable. Además de coordinar la administración y la tecnología, brindo soporte a la Dirección Ejecutiva.</p>
+          <p><strong>Dato de color:</strong> Me encanta jugar al tenis.</p>
         </article>
       </section>
 
-      
-        <article class="team-member">
-          <h4>Ornella Bellosi</h4>
-          <p>
-            Me incorporé al Patronato en diciembre de 2023 y actualmente soy la Responsable del área. Soy Contadora Pública, egresada de la Universidad de Belgrano, y tengo más de 10 años de experiencia en el ámbito administrativo y contable. Además de coordinar la administración y la tecnología, brindo soporte a la Dirección Ejecutiva.
-          </p>
-          <p><strong>Dato de color:</strong> Me encanta jugar al tenis.</p>
-        </article>
-
       <section id="compromiso">
         <h3>Nuestro Compromiso</h3>
-        <p>
-          El Departamento de Administración sigue comprometido con la transparencia, eficiencia y mejora continua en la gestión de la organización. A través del trabajo en equipo y la colaboración con distintas áreas y profesionales, buscamos optimizar los procesos para contribuir al crecimiento del Patronato de la Infancia.
-        </p>
+        <p>El Departamento de Administración sigue comprometido con la transparencia, eficiencia y mejora continua en la gestión de la organización. A través del trabajo en equipo y la colaboración con distintas áreas y profesionales, buscamos optimizar los procesos para contribuir al crecimiento del Patronato de la Infancia.</p>
         <p><strong>¡Seguimos avanzando juntos para fortalecer nuestra misión!</strong></p>
       </section>
     </article>
@@ -84,8 +163,5 @@
   <footer class="page-footer">
     <p>&copy; 2025 Patronato de la Infancia</p>
   </footer>
-
-  <script src="js/script.js"></script>
 </body>
 </html>
-
