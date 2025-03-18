@@ -1,472 +1,65 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menú Interactivo</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
-        
-        body {
-            font-family: 'Montserrat', sans-serif;
-            text-align: center;
-            background-color: #f5f5f5;
-        }
-        .menu {
-            margin: 20px;
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-        }
-        .menu button {
-            padding: 20px 30px;
-            font-size: 18px;
-            cursor: pointer;
-            border: none;
-            color: white;
-            transition: background-color 0.3s, transform 0.2s;
-            border-radius: 50px;
-            font-weight: bold;
-            text-transform: uppercase;
-            width: 220px;
-            height: 80px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            line-height: 1.3;
-        }
-        .menu button:hover {
-            transform: scale(1.1);
-        }
-        .menu button.active {
-            filter: brightness(85%);
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
-        }
-        #btn1 { background-color: red; }
-        #btn2 { background-color: blue; }
-        #btn3 { background-color: green; }
-        #btn4 { background-color: orange; }
-        
-        .content {
-            display: none;
-            margin-top: 20px;
-            padding: 20px;
-            color: white;
-            border-radius: 15px;
-            width: 60%;
-            margin-left: auto;
-            margin-right: auto;
-            text-align: center;
-        }
-        .content h1 {
-            text-align: center;
-            font-size: 36px;
-            color: white;
-            margin-bottom: 25px;
-        }
-        .content h2 {
-            text-align: center;
-            font-size: 32px;
-            color: white;
-            margin-bottom: 20px;
-        }
-        .content h3 {
-            text-align: center;
-            font-size: 28px;
-            color: white;
-            margin-bottom: 15px;
-        }
-        .content h4 {
-            text-align: center;
-            font-size: 24px;
-            color: white;
-            margin-bottom: 10px;
-        }
-        #info1 { background-color: red; }
-        #info2 { background-color: blue; }
-        #info3 { background-color: green; }
-        #info4 { background-color: orange; }
-        
-        .content img {
-            max-width: 100%;
-            height: auto;
-            margin-top: 10px;
-            border-radius: 10px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Newsletter Corporativo - Editorial</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="menu">
-        <button id="btn1" onclick="showContent('info1', 'btn1')">NOVEDADES<br>INSTITUCIONALES</button>
-        <button id="btn2" onclick="showContent('info2', 'btn2')">PROYECTOS<br>DESTACADOS</button>
-        <button id="btn3" onclick="showContent('info3', 'btn3')">EVENTOS<br>DESTACADOS</button>
-        <button id="btn4" onclick="showContent('info4', 'btn4')">CONOCIÉNDONOS</button>
-    </div>
-    
-    <div id="info1" class="content">
-        <h2>Novedades Institucionales</h2>
-        <p>Nos complace compartir con ustedes las últimas Novedades Institucionales sobre el personal, incorporaciones, nuevos cargos y mejoras institucionales.</p>
-        <h3>Novedades de personal</h3>
-        <h4>Incorporaciones</h4>
-        <p><strong>Desde febrero 2025</strong></p>
-        <ul>
-            <li>Celia Araceli Velazco - Par Pedagógico del Primer Ciclo (Escuela Infancia 2000)</li>
-            <li>Gabriela Lima - Orientadora Educacional (Escuela Infancia 2000)</li>
-            <li>Nicolás Sebastián Ramón Leiva - Maestro de Grado de 2° (Escuela Infancia 2000)</li>
-        </ul>
-      <h4>Cambios</h4>
-       <p><strong>Desde marzo 2025</strong></p>
-        <ul>
-            <li>Agustina Torres Majdalani se suma como Asistente Montessori del turno tarde (Escuela De los Ángeles Custodios)</li>
-            <li>Ariel Cozzi se incorpora como Asistente de Administración (Patronato de la Infancia)</li>
-            <li>Florencia Alarcón se incorpora como Par Pedagógico del Primer Ciclo (1°, 2° y 3°) (Escuela Infancia 2000)</li>
-          <li>Gabriela Peralta y Milagros Echegaray se incorporan como Auxiliares de Cocina (Instituto Loreto)</li>
-          <li>Rosario Barauna Centeno se suma como Maestra de Grado de 1°B (Escuela De los Ángeles Custodios)</li>
-          <li>Stella Maris Acosta asume como Docente con grupo a cargo del turno tarde, manteniéndose en el turno mañana como Maestra de Grado (Escuela Infancia 2000)</li>
-          <li>Marina Mabel Matayoshi se incorpora como Maestra de Apoyo (Escuela De los Ángeles Custodios)</li>
-        </ul>
-        <h4>Mejoras Institucionales</h4>
-        <p>✔ Gracias a Plavicon y el aporte de donantes, logramos pintar y restaurar los patios de Ángeles Custodios, creando espacios más lindos y acogedores para jugar y aprender.</p>
-        <img decoding="async" src="https://patronatodelainfancia.org/wp-content/uploads/2025/03/Patio-1.jpg" alt="Imagen Novedades Institucionales">
-        <h4></h4>
-        <h4></h4>
-        <h4>El antes y el despues...</h4>
-        <h4></h4>
-        <img decoding="async" src="https://patronatodelainfancia.org/wp-content/uploads/2025/03/Patio-2.jpg" alt="El antes y el despues...">
-        <h4></h4>
-        <h4></h4>
-         <h4></h4> 
-         <h4></h4>
-        <h4></h4>
-        <img decoding="async" src="https://patronatodelainfancia.org/wp-content/uploads/2025/03/Patio-3.jpg" alt="El antes y el despues...">
-        <h4></h4>
-        <h4></h4>
-         <h4></h4>
-          <h4></h4>
-        <h4></h4>
-        <img decoding="async" src="https://patronatodelainfancia.org/wp-content/uploads/2025/03/Patio-4.jpg" alt="El antes y el despues...">
-       <h4></h4>
-        <h4></h4>
-       <h4>Obras en el predio Loreto y en la escuela Infancia 2000</h4>
-      <img decoding="async" src="https://patronatodelainfancia.org/wp-content/uploads/2025/03/Predio.jpg" alt="El antes y el despues...">
-      <h4></h4>
-      <p>Nos preparamos para recibir un nuevo año con espacios renovados y mejoras clave tanto en la escuela Infancia 2000 como en el predio. Durante los últimos meses, realizamos importantes tareas de mantenimiento para garantizar instalaciones seguras y funcionales.
-En la escuela, trabajamos en pintura, electricidad y arreglos generales. Además, en relación a las donaciones recibidas de parte de Fundacion Calderón de la Barca, acompañamos y supervisamos la construcción de la  nueva escalera de emergencia y la puerta de evacuación. También gracias a la Fundacion Calderón de la Barca instalamos en las aulas Smart TV, potenciando la enseñanza con nuevas herramientas tecnológicas.
-Asimismo, se realizaron mejoras en el nuevo salón de 2° grado A y en diferentes sectores del edificio.
-Por su parte, en el predio, completamos tareas de mantenimiento para que todo esté listo para recibir a campamentos y contingentes en esta nueva temporada.
-Nos aseguramos de que cada espacio esté en las mejores condiciones para brindar experiencias inolvidables a quienes nos visitan.
-Nada de esto sería posible sin el compromiso y la dedicación de cada persona que forma parte de esta comunidad educativa. Sigamos trabajando juntos, con el mismo esfuerzo y vocación, para brindarles a nuestros alumnos un entorno seguro, moderno y acogedor donde puedan crecer, aprender y disfrutar.
-En este sentido, quiero hacer un agradecimiento especial al equipo del Instituto Loreto, por su dedicación y esfuerzo en cada una de estas mejoras. Su trabajo incansable y compromiso diario son fundamentales para el crecimiento de nuestra institución.</p>
+  <header>
+    <h1>Newsletter Corporativo</h1>
+  </header>
 
-    </div>
-<div id="info2" class="content">
-        <h2>Proyectos Destacados</h2>
-        <p>En esta sección, incluimos los Proyectos Destacados de los equipos que conforman a nuestra organización.
-Se contarán los diferentes avances y resultados en los diferentes proyectos que se realizan.</p>
-  <h4></h4>
-  <h4></h4>
-  <h3>Presentamos al equipo de Administración del Patronato de la Infancia.</h3>
-        <img decoding="async" src="https://patronatodelainfancia.org/wp-content/uploads/2025/03/Equi.jpg" alt="Imagen Proyectos Destacados">
-  <p>Quiero aprovechar este espacio para contarles un poco más sobre el trabajo que realizamos en el área de Administración del Patronato de la Infancia y presentarles a mi equipo.</p>
-  <p>Nuestro departamento es el responsable de gestionar todas las tareas contables, financieras y administrativas de la organización. Entre nuestras funciones se encuentran la contratación y pago a proveedores, la registración de los movimientos económicos, la confección del balance anual, los controles impositivos, el soporte en auditorías externas e internas, la mejora de procesos, la colaboración en asuntos legales, la gestión de trámites y reportes, entre muchas otras.</p>
-  <p>Últimamente nos hemos involucrado en la coordinación de los procesos tecnológicos acompañando la iniciativa de la Comisión Directiva en la digitalización de datos y procesos. Nuestro departamento se encuentra en feedback constante con las demás áreas y a su vez trabajamos con los profesionales que colaboran a la organización como ser contador externo, abogados, analistas informáticos de base de datos y demás.</p>
-  <p>¿Quiénes formamos el equipo de Administración?</p>
-  <ul>
-    <li>Cecilia Giurlanda: Trabaja en el Patronato desde hace más de 29 años. Si bien hoy es parte del área de administración, comenzó su camino en el sector de “tarjetas navideñas” junto con Anikò Szabò. Es Licenciada en Análisis de Sistemas por la Facultad de Ingeniería de la UBA y también realizó el profesorado en Disciplinas Industriales en la UTN. Actualmente, es la responsable de la registración de ingresos y egresos de la institución. Dato de color: le gustan mucho los idiomas (italiano, inglés, portugués) y se recibió de Maestra de italiano en la Dante Alighieri.</li>
-    <li>Ariel Marcelo Cozzi: Se incorporó en marzo de 2025. Es Licenciado en Economía por la UBA y profesor en el Colegio San Pedro. Tiene experiencia en distintas ONG y actualmente se desarrolla en el área de administración de Patronato realizando registraciones contables y dando soporte a la responsable de área. Dato de color: Le gusta jugar al fútbol.</li>
-    <li>Ornella Bellosi (quien les habla): Me incorporé al Patronato en diciembre de 2023 y actualmente soy la Responsable del área. Soy Contadora Pública, egresada de la Universidad de Belgrano, y tengo más de 10 años de experiencia en el ámbito administrativo y contable. Además de coordinar la administración y la tecnología, brindo soporte a la Dirección Ejecutiva. Dato de color: me encanta jugar al tenis.</li>
-  </ul>
-  <h4></h4>
-  <p>El Departamento de Administración sigue comprometido con la transparencia, eficiencia y mejora continua en la gestión de la organización. A través del trabajo en equipo y la colaboración con distintas áreas y profesionales, buscamos optimizar los procesos para contribuir al crecimiento del Patronato de la Infancia.</p>
-  <p>¡Seguimos avanzando juntos para fortalecer nuestra misión!</p>
-</div>
-    <div id="info3" class="content">
-        <h2>Eventos Destacados</h2>
-        <p>Resumen de los eventos más relevantes y su impacto en la comunidad.</p>
-        <img decoding="async" src="https://patronatodelainfancia.org/wp-content/uploads/2025/03/Eventos.jpg" alt="Imagen Eventos Destacados">
-    </div>
-    <div id="info4" class="content">
-        <h2>Conociéndonos</h2>
-        <p>Un espacio para conocer mejor a nuestra comunidad y sus integrantes.</p>
-        <img decoding="async" src="https://patronatodelainfancia.org/wp-content/uploads/2025/03/Conociendonos.jpg" alt="Imagen Conociéndonos">
-    </div>
-    <script>
-        function showContent(contentId, buttonId) {
-            let contents = document.querySelectorAll('.content');
-            let buttons = document.querySelectorAll('.menu button');
-            
-            contents.forEach(content => content.style.display = 'none');
-            buttons.forEach(button => button.classList.remove('active'));
-            
-            let contentElement = document.getElementById(contentId);
-            let buttonElement = document.getElementById(buttonId);
-            
-            if (contentElement && buttonElement) {
-                contentElement.style.display = 'block';
-                buttonElement.classList.add('active');
-            }
-        }
-    </script>
-</body>
-</html>
-				</div>
-				</div>
-					</div>
-		</div>
-					</div>
-		</section>
-				</div>
-		
-	</main><!-- #main -->
+  <!-- Sección Editorial -->
+  <section id="editorial">
+    <article>
+      <h2>Editorial</h2>
+      <p>
+        Bienvenido a nuestro newsletter corporativo. En esta edición encontrarás las últimas novedades institucionales, proyectos destacados, eventos importantes y un espacio para conocernos mejor. Nuestro compromiso es mantenerte informado de manera clara y concisa.
+      </p>
+    </article>
+  </section>
 
-	
-	
-	
-		<div class="ekit-template-content-markup ekit-template-content-footer">		<div data-elementor-type="wp-post" data-elementor-id="154" class="elementor elementor-154">
-						<section class="elementor-section elementor-top-section elementor-element elementor-element-cd5ab20 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="cd5ab20" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-						<div class="elementor-container elementor-column-gap-default">
-					<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-7e3e3fa" data-id="7e3e3fa" data-element_type="column">
-			<div class="elementor-widget-wrap elementor-element-populated">
-						<div class="elementor-element elementor-element-7911862 elementor-widget elementor-widget-heading" data-id="7911862" data-element_type="widget" data-widget_type="heading.default">
-				<div class="elementor-widget-container">
-					<h3 class="elementor-heading-title elementor-size-default">CÓMO AYUDARNOS</h3>				</div>
-				</div>
-				<div class="elementor-element elementor-element-5f602c6 elementor-align-center elementor-widget elementor-widget-button" data-id="5f602c6" data-element_type="widget" data-widget_type="button.default">
-				<div class="elementor-widget-container">
-									<div class="elementor-button-wrapper">
-					<a class="elementor-button elementor-button-link elementor-size-sm elementor-animation-grow" href="https://donaronline.org/patronato-de-la-infancia/sumate-como-donante-del-patronato-de-la-infancia">
-						<span class="elementor-button-content-wrapper">
-									<span class="elementor-button-text">SUMATE COMO <BR>DONANTE</span>
-					</span>
-					</a>
-				</div>
-								</div>
-				</div>
-				<div class="elementor-element elementor-element-9093ff5 elementor-align-center elementor-widget elementor-widget-button" data-id="9093ff5" data-element_type="widget" data-widget_type="button.default">
-				<div class="elementor-widget-container">
-									<div class="elementor-button-wrapper">
-					<a class="elementor-button elementor-button-link elementor-size-sm elementor-animation-grow" href="http://patronatodelainfancia.org/predio-loreto/">
-						<span class="elementor-button-content-wrapper">
-									<span class="elementor-button-text">ALQUILER <BR>PREDIO LORETO</span>
-					</span>
-					</a>
-				</div>
-								</div>
-				</div>
-				<div class="elementor-element elementor-element-ccc57d7 elementor-align-center elementor-widget elementor-widget-button" data-id="ccc57d7" data-element_type="widget" data-widget_type="button.default">
-				<div class="elementor-widget-container">
-									<div class="elementor-button-wrapper">
-					<a class="elementor-button elementor-button-link elementor-size-sm elementor-animation-grow" href="mailto:%20info@patronatodelainfancia.org">
-						<span class="elementor-button-content-wrapper">
-									<span class="elementor-button-text">SUMATE COMO <BR>EMPRESA AMIGA</span>
-					</span>
-					</a>
-				</div>
-								</div>
-				</div>
-					</div>
-		</div>
-				<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-ae2bc03" data-id="ae2bc03" data-element_type="column">
-			<div class="elementor-widget-wrap elementor-element-populated">
-						<div class="elementor-element elementor-element-2676c33 elementor-widget elementor-widget-heading" data-id="2676c33" data-element_type="widget" data-widget_type="heading.default">
-				<div class="elementor-widget-container">
-					<h2 class="elementor-heading-title elementor-size-default">DATOS DE CONTACTO</h2>				</div>
-				</div>
-				<div class="elementor-element elementor-element-2c7e550 elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="2c7e550" data-element_type="widget" data-widget_type="icon-list.default">
-				<div class="elementor-widget-container">
-							<ul class="elementor-icon-list-items">
-							<li class="elementor-icon-list-item">
-											<span class="elementor-icon-list-icon">
-							<i aria-hidden="true" class="icon icon-placeholder"></i>						</span>
-										<span class="elementor-icon-list-text">Dirección: Mansilla 2588 CP 1425 Capital Federal, Argentina</span>
-									</li>
-								<li class="elementor-icon-list-item">
-											<span class="elementor-icon-list-icon">
-							<i aria-hidden="true" class="icon icon-phone-handset"></i>						</span>
-										<span class="elementor-icon-list-text">Teléfono: (011) 4961-5759</span>
-									</li>
-								<li class="elementor-icon-list-item">
-											<a href="mailto:info@patronatodelainfancia.org">
+  <!-- Resumen de Secciones -->
+  <main>
+    <section class="resumen" id="novedades-resumen">
+      <h2>Novedades Institucionales</h2>
+      <p>
+        Descubre los cambios y mejoras que se han implementado en nuestra institución. Se incluyen novedades de personal, incorporaciones y obras realizadas.
+      </p>
+      <a href="novedades.html" class="leer-mas">Leer más</a>
+    </section>
 
-												<span class="elementor-icon-list-icon">
-							<i aria-hidden="true" class="icon icon-email"></i>						</span>
-										<span class="elementor-icon-list-text">Email: info@patronatodelainfancia.org</span>
-											</a>
-									</li>
-						</ul>
-						</div>
-				</div>
-					</div>
-		</div>
-				<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-c36e842" data-id="c36e842" data-element_type="column">
-			<div class="elementor-widget-wrap elementor-element-populated">
-						<div class="elementor-element elementor-element-8f767c6 elementor-widget elementor-widget-image" data-id="8f767c6" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-															<img width="300" height="155" src="https://patronatodelainfancia.org/wp-content/uploads/2020/08/RACI-logo-300x155.jpg" class="attachment-medium size-medium wp-image-120" alt="RACI" srcset="https://patronatodelainfancia.org/wp-content/uploads/2020/08/RACI-logo-300x155.jpg 300w, https://patronatodelainfancia.org/wp-content/uploads/2020/08/RACI-logo.jpg 398w" sizes="(max-width: 300px) 100vw, 300px" />															</div>
-				</div>
-				<div class="elementor-element elementor-element-4bba5ef elementor-widget elementor-widget-image" data-id="4bba5ef" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-															<img width="1024" height="207" src="https://patronatodelainfancia.org/wp-content/uploads/2020/09/HA-portal-gris-1024x207.png" class="attachment-large size-large wp-image-158" alt="" srcset="https://patronatodelainfancia.org/wp-content/uploads/2020/09/HA-portal-gris-1024x207.png 1024w, https://patronatodelainfancia.org/wp-content/uploads/2020/09/HA-portal-gris-300x61.png 300w, https://patronatodelainfancia.org/wp-content/uploads/2020/09/HA-portal-gris-768x155.png 768w, https://patronatodelainfancia.org/wp-content/uploads/2020/09/HA-portal-gris-1536x311.png 1536w, https://patronatodelainfancia.org/wp-content/uploads/2020/09/HA-portal-gris.png 1987w" sizes="(max-width: 1024px) 100vw, 1024px" />															</div>
-				</div>
-					</div>
-		</div>
-					</div>
-		</section>
-				<section class="elementor-section elementor-top-section elementor-element elementor-element-328dba8 elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-id="328dba8" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-						<div class="elementor-container elementor-column-gap-no">
-					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-d5198b7" data-id="d5198b7" data-element_type="column">
-			<div class="elementor-widget-wrap elementor-element-populated">
-						<div class="elementor-element elementor-element-7d9cc33 elementor-shape-circle elementor-grid-0 e-grid-align-center elementor-widget elementor-widget-social-icons" data-id="7d9cc33" data-element_type="widget" data-widget_type="social-icons.default">
-				<div class="elementor-widget-container">
-							<div class="elementor-social-icons-wrapper elementor-grid">
-							<span class="elementor-grid-item">
-					<a class="elementor-icon elementor-social-icon elementor-social-icon-facebook elementor-repeater-item-f26c7cb" href="https://www.facebook.com/PatronatodelaInfancia1892" target="_blank">
-						<span class="elementor-screen-only">Facebook</span>
-						<i class="fab fa-facebook"></i>					</a>
-				</span>
-							<span class="elementor-grid-item">
-					<a class="elementor-icon elementor-social-icon elementor-social-icon-instagram elementor-repeater-item-0fd5470" href="https://www.instagram.com/patronatodelainfancia/" target="_blank">
-						<span class="elementor-screen-only">Instagram</span>
-						<i class="fab fa-instagram"></i>					</a>
-				</span>
-							<span class="elementor-grid-item">
-					<a class="elementor-icon elementor-social-icon elementor-social-icon-linkedin elementor-repeater-item-3cf7e9d" href="https://www.linkedin.com/company/patronato-de-la-infancia/" target="_blank">
-						<span class="elementor-screen-only">Linkedin</span>
-						<i class="fab fa-linkedin"></i>					</a>
-				</span>
-							<span class="elementor-grid-item">
-					<a class="elementor-icon elementor-social-icon elementor-social-icon-youtube elementor-repeater-item-909028d" href="https://www.youtube.com/channel/UCuFOxMsy92heiiPWNChzbjQ" target="_blank">
-						<span class="elementor-screen-only">Youtube</span>
-						<i class="fab fa-youtube"></i>					</a>
-				</span>
-					</div>
-						</div>
-				</div>
-					</div>
-		</div>
-					</div>
-		</section>
-				</div>
-		</div>
-	
-	
-</div><!-- #wrap -->
+    <section class="resumen" id="proyectos-resumen">
+      <h2>Proyectos Destacados</h2>
+      <p>
+        Conoce los proyectos en los que estamos trabajando, los avances logrados y el equipo detrás de cada iniciativa.
+      </p>
+      <a href="proyectos.html" class="leer-mas">Leer más</a>
+    </section>
 
+    <section class="resumen" id="eventos-resumen">
+      <h2>Eventos Destacados</h2>
+      <p>
+        Un resumen de los eventos más importantes que han tenido un impacto en nuestra comunidad y en la forma de trabajar en conjunto.
+      </p>
+      <a href="eventos.html" class="leer-mas">Leer más</a>
+    </section>
 
-</div><!-- #outer-wrap -->
+    <section class="resumen" id="conocenos-resumen">
+      <h2>Conociéndonos</h2>
+      <p>
+        Te invitamos a conocer a las personas que hacen posible nuestra labor, a través de historias y presentaciones de nuestros integrantes.
+      </p>
+      <a href="conocenos.html" class="leer-mas">Leer más</a>
+    </section>
+  </main>
 
+  <footer>
+    <p>&copy; 2025 Patronato de la Infancia</p>
+  </footer>
 
-
-<a aria-label="Hacer scroll a la parte superior de la página" href="#" id="scroll-top" class="scroll-top-right"><i class=" fa fa-angle-up" aria-hidden="true" role="img"></i></a>
-
-
-
-
-			<script type='text/javascript'>
-				const lazyloadRunObserver = () => {
-					const lazyloadBackgrounds = document.querySelectorAll( `.e-con.e-parent:not(.e-lazyloaded)` );
-					const lazyloadBackgroundObserver = new IntersectionObserver( ( entries ) => {
-						entries.forEach( ( entry ) => {
-							if ( entry.isIntersecting ) {
-								let lazyloadBackground = entry.target;
-								if( lazyloadBackground ) {
-									lazyloadBackground.classList.add( 'e-lazyloaded' );
-								}
-								lazyloadBackgroundObserver.unobserve( entry.target );
-							}
-						});
-					}, { rootMargin: '200px 0px 200px 0px' } );
-					lazyloadBackgrounds.forEach( ( lazyloadBackground ) => {
-						lazyloadBackgroundObserver.observe( lazyloadBackground );
-					} );
-				};
-				const events = [
-					'DOMContentLoaded',
-					'elementor/lazyload/observe',
-				];
-				events.forEach( ( event ) => {
-					document.addEventListener( event, lazyloadRunObserver );
-				} );
-			</script>
-			<link rel='stylesheet' id='widget-heading-css' href='https://patronatodelainfancia.org/wp-content/plugins/elementor/assets/css/widget-heading.min.css?ver=3.26.4' media='all' />
-<link rel='stylesheet' id='e-animation-grow-css' href='https://patronatodelainfancia.org/wp-content/plugins/elementor/assets/lib/animations/styles/e-animation-grow.min.css?ver=3.26.4' media='all' />
-<link rel='stylesheet' id='widget-icon-list-css' href='https://patronatodelainfancia.org/wp-content/plugins/elementor/assets/css/widget-icon-list.min.css?ver=3.26.4' media='all' />
-<link rel='stylesheet' id='widget-image-css' href='https://patronatodelainfancia.org/wp-content/plugins/elementor/assets/css/widget-image.min.css?ver=3.26.4' media='all' />
-<link rel='stylesheet' id='widget-social-icons-css' href='https://patronatodelainfancia.org/wp-content/plugins/elementor/assets/css/widget-social-icons.min.css?ver=3.26.4' media='all' />
-<link rel='stylesheet' id='e-apple-webkit-css' href='https://patronatodelainfancia.org/wp-content/plugins/elementor/assets/css/conditionals/apple-webkit.min.css?ver=3.26.4' media='all' />
-<script src="https://patronatodelainfancia.org/wp-includes/js/dist/hooks.min.js?ver=4d63a3d491d11ffd8ac6" id="wp-hooks-js"></script>
-<script src="https://patronatodelainfancia.org/wp-includes/js/dist/i18n.min.js?ver=5e580eb46a90c2b997e6" id="wp-i18n-js"></script>
-<script id="wp-i18n-js-after">
-wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
-</script>
-<script src="https://patronatodelainfancia.org/wp-content/plugins/contact-form-7/includes/swv/js/index.js?ver=6.0.2" id="swv-js"></script>
-<script id="contact-form-7-js-translations">
-( function( domain, translations ) {
-	var localeData = translations.locale_data[ domain ] || translations.locale_data.messages;
-	localeData[""].domain = domain;
-	wp.i18n.setLocaleData( localeData, domain );
-} )( "contact-form-7", {"translation-revision-date":"2024-05-08 07:23:50+0000","generator":"GlotPress\/4.0.1","domain":"messages","locale_data":{"messages":{"":{"domain":"messages","plural-forms":"nplurals=2; plural=n != 1;","lang":"es_AR"},"Error:":["Error:"]}},"comment":{"reference":"includes\/js\/index.js"}} );
-</script>
-<script id="contact-form-7-js-before">
-var wpcf7 = {
-    "api": {
-        "root": "https:\/\/patronatodelainfancia.org\/wp-json\/",
-        "namespace": "contact-form-7\/v1"
-    }
-};
-</script>
-<script src="https://patronatodelainfancia.org/wp-content/plugins/contact-form-7/includes/js/index.js?ver=6.0.2" id="contact-form-7-js"></script>
-<script src="https://patronatodelainfancia.org/wp-includes/js/imagesloaded.min.js?ver=5.0.0" id="imagesloaded-js"></script>
-<script id="oceanwp-main-js-extra">
-var oceanwpLocalize = {"nonce":"0616fd994c","isRTL":"","menuSearchStyle":"disabled","mobileMenuSearchStyle":"disabled","sidrSource":null,"sidrDisplace":"1","sidrSide":"left","sidrDropdownTarget":"link","verticalHeaderTarget":"link","customScrollOffset":"0","customSelects":".woocommerce-ordering .orderby, #dropdown_product_cat, .widget_categories select, .widget_archive select, .single-product .variations_form .variations select","ajax_url":"https:\/\/patronatodelainfancia.org\/wp-admin\/admin-ajax.php","oe_mc_wpnonce":"c7b2d57bc4"};
-</script>
-<script src="https://patronatodelainfancia.org/wp-content/themes/oceanwp/assets/js/theme.min.js?ver=3.4.2" id="oceanwp-main-js"></script>
-<script src="https://patronatodelainfancia.org/wp-content/themes/oceanwp/assets/js/drop-down-mobile-menu.min.js?ver=3.4.2" id="oceanwp-drop-down-mobile-menu-js"></script>
-<script src="https://patronatodelainfancia.org/wp-content/themes/oceanwp/assets/js/vendors/magnific-popup.min.js?ver=3.4.2" id="ow-magnific-popup-js"></script>
-<script src="https://patronatodelainfancia.org/wp-content/themes/oceanwp/assets/js/ow-lightbox.min.js?ver=3.4.2" id="oceanwp-lightbox-js"></script>
-<script src="https://patronatodelainfancia.org/wp-content/themes/oceanwp/assets/js/vendors/flickity.pkgd.min.js?ver=3.4.2" id="ow-flickity-js"></script>
-<script src="https://patronatodelainfancia.org/wp-content/themes/oceanwp/assets/js/ow-slider.min.js?ver=3.4.2" id="oceanwp-slider-js"></script>
-<script src="https://patronatodelainfancia.org/wp-content/themes/oceanwp/assets/js/scroll-effect.min.js?ver=3.4.2" id="oceanwp-scroll-effect-js"></script>
-<script src="https://patronatodelainfancia.org/wp-content/themes/oceanwp/assets/js/scroll-top.min.js?ver=3.4.2" id="oceanwp-scroll-top-js"></script>
-<script src="https://patronatodelainfancia.org/wp-content/themes/oceanwp/assets/js/select.min.js?ver=3.4.2" id="oceanwp-select-js"></script>
-<script src="https://patronatodelainfancia.org/wp-content/plugins/elementskit-lite/libs/framework/assets/js/frontend-script.js?ver=3.3.7" id="elementskit-framework-js-frontend-js"></script>
-<script id="elementskit-framework-js-frontend-js-after">
-		var elementskit = {
-			resturl: 'https://patronatodelainfancia.org/wp-json/elementskit/v1/',
-		}
-
-		
-</script>
-<script src="https://patronatodelainfancia.org/wp-content/plugins/elementskit-lite/widgets/init/assets/js/widget-scripts.js?ver=3.3.7" id="ekit-widget-scripts-js"></script>
-<script id="flickr-widget-script-js-extra">
-var flickrWidgetParams = {"widgets":[]};
-</script>
-<script src="https://patronatodelainfancia.org/wp-content/plugins/ocean-extra/includes/widgets/js/flickr.min.js?ver=6.7.2" id="flickr-widget-script-js"></script>
-<script src="https://www.google.com/recaptcha/api.js?render=6Lcdi_AjAAAAAG0_gRSn5DgBRTCaEnQzQr_FCETO&amp;ver=3.0" id="google-recaptcha-js"></script>
-<script src="https://patronatodelainfancia.org/wp-includes/js/dist/vendor/wp-polyfill.min.js?ver=3.15.0" id="wp-polyfill-js"></script>
-<script id="wpcf7-recaptcha-js-before">
-var wpcf7_recaptcha = {
-    "sitekey": "6Lcdi_AjAAAAAG0_gRSn5DgBRTCaEnQzQr_FCETO",
-    "actions": {
-        "homepage": "homepage",
-        "contactform": "contactform"
-    }
-};
-</script>
-<script src="https://patronatodelainfancia.org/wp-content/plugins/contact-form-7/modules/recaptcha/index.js?ver=6.0.2" id="wpcf7-recaptcha-js"></script>
-<script src="https://patronatodelainfancia.org/wp-content/plugins/ocean-social-sharing/assets/js/social.js?ver=2.2.0" id="oss-social-share-script-js"></script>
-<script src="https://patronatodelainfancia.org/wp-content/plugins/elementor/assets/js/webpack.runtime.min.js?ver=3.26.4" id="elementor-webpack-runtime-js"></script>
-<script src="https://patronatodelainfancia.org/wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=3.26.4" id="elementor-frontend-modules-js"></script>
-<script src="https://patronatodelainfancia.org/wp-includes/js/jquery/ui/core.min.js?ver=1.13.3" id="jquery-ui-core-js"></script>
-<script id="elementor-frontend-js-before">
-var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false,"isScriptDebug":false},"i18n":{"shareOnFacebook":"Compartir en Facebook","shareOnTwitter":"Compartir en Twitter","pinIt":"Fijarlo","download":"Descargar","downloadImage":"Descargar imagen","fullscreen":"Pantalla completa","zoom":"Zoom","share":"Compartir","playVideo":"Reproducir v\u00eddeo","previous":"Anterior","next":"Siguiente","close":"Cerrar","a11yCarouselPrevSlideMessage":"Previous slide","a11yCarouselNextSlideMessage":"Next slide","a11yCarouselFirstSlideMessage":"This is the first slide","a11yCarouselLastSlideMessage":"This is the last slide","a11yCarouselPaginationBulletMessage":"Go to slide"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"responsive":{"breakpoints":{"mobile":{"label":"Mobile Portrait","value":767,"default_value":767,"direction":"max","is_enabled":true},"mobile_extra":{"label":"Mobile Landscape","value":880,"default_value":880,"direction":"max","is_enabled":false},"tablet":{"label":"Tablet Portrait","value":1024,"default_value":1024,"direction":"max","is_enabled":true},"tablet_extra":{"label":"Tablet Landscape","value":1200,"default_value":1200,"direction":"max","is_enabled":false},"laptop":{"label":"Portable","value":1366,"default_value":1366,"direction":"max","is_enabled":false},"widescreen":{"label":"Pantalla grande","value":2400,"default_value":2400,"direction":"min","is_enabled":false}},"hasCustomBreakpoints":false},"version":"3.26.4","is_static":false,"experimentalFeatures":{"additional_custom_breakpoints":true,"e_swiper_latest":true,"e_nested_atomic_repeaters":true,"e_onboarding":true,"e_css_smooth_scroll":true,"home_screen":true,"landing-pages":true,"nested-elements":true,"editor_v2":true,"link-in-bio":true,"floating-buttons":true},"urls":{"assets":"https:\/\/patronatodelainfancia.org\/wp-content\/plugins\/elementor\/assets\/","ajaxurl":"https:\/\/patronatodelainfancia.org\/wp-admin\/admin-ajax.php","uploadUrl":"https:\/\/patronatodelainfancia.org\/wp-content\/uploads"},"nonces":{"floatingButtonsClickTracking":"e6d8dc9a28"},"swiperClass":"swiper","settings":{"page":[],"editorPreferences":[]},"kit":{"active_breakpoints":["viewport_mobile","viewport_tablet"],"global_image_lightbox":"yes","lightbox_enable_counter":"yes","lightbox_enable_fullscreen":"yes","lightbox_enable_zoom":"yes","lightbox_enable_share":"yes","lightbox_title_src":"title","lightbox_description_src":"description"},"post":{"id":1110,"title":"NEWSLETER%20%E2%80%93%20Patronato%20de%20la%20Infancia","excerpt":"","featuredImage":false}};
-</script>
-<script src="https://patronatodelainfancia.org/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=3.26.4" id="elementor-frontend-js"></script>
-<script src="https://patronatodelainfancia.org/wp-content/plugins/elementskit-lite/widgets/init/assets/js/animate-circle.min.js?ver=3.3.7" id="animate-circle-js"></script>
-<script id="elementskit-elementor-js-extra">
-var ekit_config = {"ajaxurl":"https:\/\/patronatodelainfancia.org\/wp-admin\/admin-ajax.php","nonce":"fb122cb8b6"};
-</script>
-<script src="https://patronatodelainfancia.org/wp-content/plugins/elementskit-lite/widgets/init/assets/js/elementor.js?ver=3.3.7" id="elementskit-elementor-js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>
