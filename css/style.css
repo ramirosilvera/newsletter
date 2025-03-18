@@ -1,111 +1,135 @@
 /* css/style.css */
 
-* {
+/* Variables y Reset */
+:root {
+  --primary-color: #004a7c;
+  --secondary-color: #00325a;
+  --bg-color: #f2f2f2;
+  --card-bg: #ffffff;
+  --text-color: #333;
+  --font-family: 'Roboto', sans-serif;
+  --transition-speed: 0.3s;
+}
+
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
 body {
-  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-family: var(--font-family);
+  background-color: var(--bg-color);
+  color: var(--text-color);
   line-height: 1.6;
-  color: #333;
-  background-color: #f2f2f2;
-  padding: 20px;
 }
 
-header {
+/* Header Estilizado */
+.site-header {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: #fff;
+  padding: 30px 20px;
   text-align: center;
-  margin-bottom: 30px;
 }
 
-header h1 {
-  color: #004a7c;
+.header-content h1 {
+  font-size: 2.5rem;
   margin-bottom: 10px;
+}
+
+.tagline {
+  font-size: 1.1rem;
+  opacity: 0.9;
 }
 
 .menu {
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 .menu button {
-  background: #004a7c;
-  color: #fff;
+  background: #fff;
+  color: var(--primary-color);
   border: none;
-  padding: 10px 15px;
+  padding: 10px 20px;
   margin: 5px;
-  border-radius: 4px;
+  border-radius: 25px;
   cursor: pointer;
-  transition: background 0.3s;
+  font-weight: bold;
+  transition: background var(--transition-speed), color var(--transition-speed);
 }
 
 .menu button:hover {
-  background: #00325a;
-}
-
-.section {
-  background: #fff;
-  padding: 20px;
-  margin-bottom: 30px;
-  border-radius: 4px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-.resumen {
-  text-align: center;
-}
-
-.resumen button {
-  background: #004a7c;
+  background: var(--primary-color);
   color: #fff;
-  border: none;
-  padding: 10px 20px;
-  margin-top: 10px;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background 0.3s;
 }
 
-.resumen button:hover {
-  background: #00325a;
+/* Secciones y Cards */
+.section {
+  padding: 40px 20px;
 }
 
-article h2 {
-  color: #004a7c;
+.card {
+  background: var(--card-bg);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  max-width: 800px;
+  margin: 20px auto;
+  transition: transform var(--transition-speed);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h2 {
+  color: var(--primary-color);
+  margin-bottom: 15px;
+}
+
+.card p {
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+
+.subheading {
+  font-weight: bold;
   margin-bottom: 10px;
 }
 
-article p {
-  margin-bottom: 15px;
+/* Botones Generales */
+.btn, .btn-back {
+  display: inline-block;
+  background: var(--primary-color);
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background var(--transition-speed);
+  text-decoration: none;
 }
 
-article ul {
+.btn:hover, .btn-back:hover {
+  background: var(--secondary-color);
+}
+
+/* Listas */
+ul {
   margin-left: 20px;
+  list-style: disc;
   margin-bottom: 15px;
 }
 
-article ul li {
-  margin-bottom: 5px;
-}
-
-.firma {
-  font-style: italic;
-  text-align: right;
-}
-
-footer {
-  text-align: center;
-  margin-top: 30px;
-  font-size: 0.9em;
-  color: #666;
-}
-
-/* Estilos para las entrevistas */
+/* Entrevistas */
 .entrevista {
-  margin-bottom: 20px;
-  padding: 15px;
   background: #f9f9f9;
-  border-left: 4px solid #004a7c;
+  padding: 15px;
+  border-left: 5px solid var(--primary-color);
+  margin-bottom: 20px;
 }
 
 .entrevista p {
@@ -113,19 +137,44 @@ footer {
 }
 
 .nota {
-  font-size: 0.9em;
+  font-size: 0.9rem;
   color: #555;
   border-top: 1px solid #ddd;
   padding-top: 10px;
 }
 
+/* Footer */
+.site-footer, .page-footer {
+  background: var(--primary-color);
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+  margin-top: 40px;
+}
+
+/* Page Header for inner pages */
+.page-header {
+  background: var(--primary-color);
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.page-header h1 {
+  margin-bottom: 10px;
+}
+
 /* Responsive */
 @media (max-width: 600px) {
-  body {
-    padding: 10px;
+  .header-content h1 {
+    font-size: 2rem;
+  }
+  .card {
+    padding: 20px;
   }
   .menu button {
-    padding: 8px 12px;
+    padding: 8px 15px;
     margin: 3px;
   }
 }
