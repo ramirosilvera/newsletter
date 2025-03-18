@@ -15,7 +15,7 @@
       <nav class="menu">
         <button onclick="scrollToSection('editorial')">Editorial</button>
         <button onclick="scrollToSection('resumen-novedades')">Novedades de Personal</button>
-        <button onclick="scrollToSection('resumen-proyectos')">Proyectos</button>
+        <button onclick="scrollToSection('resumen-proyectos')">Proyectos Destacados</button>
         <button onclick="scrollToSection('resumen-conociendonos')">Conociéndonos</button>
       </nav>
     </div>
@@ -40,19 +40,21 @@
     <section id="resumen-novedades" class="section resumen">
       <article class="card">
         <h2>Novedades de Personal</h2>
-        <p>
-          Conoce las recientes incorporaciones y cambios en nuestro equipo educativo y de apoyo, además de las obras y mejoras implementadas durante el receso.
+        <!-- Resumen Descriptivo -->
+        <p class="summary">
+          Descubre las últimas incorporaciones y cambios en nuestro equipo educativo y de apoyo. Esta sección incluye detalles sobre las novedades desde febrero y marzo de 2025, abarcando desde nuevos docentes hasta mejoras en infraestructura y obras recientes realizadas durante el receso.
         </p>
         <button class="btn" onclick="location.href='novedades.html'">Leer más</button>
       </article>
     </section>
 
-    <!-- Resumen de Proyectos -->
+    <!-- Resumen de Proyectos Destacados -->
     <section id="resumen-proyectos" class="section resumen">
       <article class="card">
         <h2>Proyectos Destacados</h2>
-        <p>
-          Descubre el trabajo del área de Administración, la coordinación tecnológica y el compromiso para optimizar procesos.
+        <!-- Resumen Descriptivo -->
+        <p class="summary">
+          Conoce el trabajo del área de Administración que impulsa la eficiencia del Patronato. Aquí encontrarás una introducción a la gestión contable, financiera y tecnológica, además de una presentación del equipo responsable y de las iniciativas que fortalecen la organización.
         </p>
         <button class="btn" onclick="location.href='proyectos.html'">Leer más</button>
       </article>
@@ -62,8 +64,9 @@
     <section id="resumen-conociendonos" class="section resumen">
       <article class="card">
         <h2>Conociéndonos</h2>
-        <p>
-          Un espacio para conocer de cerca a los miembros de nuestra organización a través de entrevistas y relatos personales.
+        <!-- Resumen Descriptivo -->
+        <p class="summary">
+          Un espacio íntimo y personal donde se comparten entrevistas y testimonios de los miembros de nuestra organización. Descubre las historias de Romina, Luisa y Victoria, además de un especial dedicado a celebrar los cumpleaños de marzo.
         </p>
         <button class="btn" onclick="location.href='conociendonos.html'">Leer más</button>
       </article>
@@ -73,6 +76,11 @@
   <footer class="site-footer">
     <p>&copy; 2025 Patronato de la Infancia. Todos los derechos reservados.</p>
   </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
+
 
   <script src="js/script.js"></script>
 </body>
