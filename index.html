@@ -2,22 +2,30 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>COMUNICANDONOS - Patronato de la Infancia</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <header class="site-header">
-    <div class="header-content">
-      <h1>COMUNICANDONOS</h1>
-      <p class="tagline">El Newsletter del Patronato</p>
-      <nav class="menu">
-        <button onclick="scrollToSection('editorial')">Editorial</button>
-        <button onclick="scrollToSection('resumen-novedades')">Novedades de Personal</button>
-        <button onclick="scrollToSection('resumen-proyectos')">Proyectos Destacados</button>
-        <button onclick="scrollToSection('resumen-conociendonos')">Conociéndonos</button>
-      </nav>
+    <div class="header-container">
+      <!-- Logo -->
+      <div class="logo-container">
+        <a href="index.html">
+          <img src="https://patronatodelainfancia.sharepoint.com/:i:/s/EquipoPatronatodelaInfancia/EesySq4PQl5GjeXl10rFKJsBwxV02_eAGFE85lqJuAl9PQ?e=ezy5jf" alt="Logo del Patronato de la Infancia" class="logo">
+        </a>
+      </div>
+      <!-- Contenido del header -->
+      <div class="header-content">
+        <p class="tagline">El Newsletter del Patronato</p>
+        <nav class="menu">
+          <button onclick="scrollToSection('editorial')">Editorial</button>
+          <button onclick="scrollToSection('resumen-novedades')">Novedades Institucionales</button>
+          <button onclick="scrollToSection('resumen-proyectos')">Proyectos Destacados</button>
+          <button onclick="scrollToSection('resumen-conociendonos')">Conociéndonos</button>
+        </nav>
+      </div>
     </div>
   </header>
 
@@ -36,11 +44,10 @@
       </article>
     </section>
 
-    <!-- Resumen de Novedades de Personal -->
+    <!-- Resumen de Novedades Institucionales -->
     <section id="resumen-novedades" class="section resumen">
       <article class="card">
-        <h2>Novedades de Personal</h2>
-        <!-- Resumen Descriptivo -->
+        <h2>Novedades Institucionales</h2>
         <p class="summary">
           Descubre las últimas incorporaciones y cambios en nuestro equipo educativo y de apoyo. En esta sección se detalla el ingreso de nuevos docentes, personal de apoyo y las mejoras realizadas durante el receso.
         </p>
@@ -52,9 +59,8 @@
     <section id="resumen-proyectos" class="section resumen">
       <article class="card">
         <h2>Proyectos Destacados</h2>
-        <!-- Resumen Descriptivo -->
         <p class="summary">
-          Conoce el trabajo del área de Administración que impulsa la eficiencia del Patronato. Aquí encontrarás detalles sobre la gestión contable, financiera y tecnológica, así como la presentación del equipo responsable y sus iniciativas.
+          Conoce el trabajo del área de Administración que impulsa al Patronato. Aquí encontrarás detalles sobre la gestión contable, financiera y tecnológica, así como la presentación del equipo responsable y sus iniciativas.
         </p>
         <button class="btn" onclick="location.href='proyectos.html'">Leer más</button>
       </article>
@@ -64,7 +70,6 @@
     <section id="resumen-conociendonos" class="section resumen">
       <article class="card">
         <h2>Conociéndonos</h2>
-        <!-- Resumen Descriptivo -->
         <p class="summary">
           Un espacio íntimo donde se presentan entrevistas y testimonios de los miembros de la organización. Descubre las historias personales y anécdotas de Romina, Luisa y Victoria, además de un especial para celebrar los cumpleaños de marzo.
         </p>
@@ -76,6 +81,17 @@
   <footer class="site-footer">
     <p>&copy; 2025 Patronato de la Infancia. Todos los derechos reservados.</p>
   </footer>
+
+  <script>
+    function scrollToSection(sectionId) {
+      var section = document.getElementById(sectionId);
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  </script>
+</body>
+</html>
 
   <script src="js/script.js"></script>
 </body>
